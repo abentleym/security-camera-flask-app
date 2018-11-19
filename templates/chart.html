@@ -22,7 +22,9 @@
   }
   </style>
 
-<!-- import plugin script -->   <script src='static/Chart.min.js'></script>   </head><body>
+<!-- import plugin script -->  
+ <script src='static/Chart.min.js'></script>   
+ </head><body>
 
 <h1>Security Camera Dashboard</h1><!-- bar chart canvas element -->
 <canvas id="chart" width="600" height="400"></canvas>
@@ -33,6 +35,7 @@
 <div class="row">
   <div class="column">
     <script>
+
        // bar chart data
        var lineData = {
        labels : [{% for item in labels %}
@@ -89,7 +92,7 @@
     <script>
         // line chart data
        var lineData = {
-       labels : [{% for item in labels %}
+       labels : [{% for item in labels2 %}
                       "{{item}}",
                   {% endfor %}],
        datasets : [
@@ -101,7 +104,7 @@
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
                 bezierCurve : false,
-                data : [{% for item in values %}
+                data : [{% for item in values2 %}
                           {{item}},
                         {% endfor %}]
           }]
@@ -144,7 +147,7 @@
     <script>
       // bar chart data
          var barData = {
-         labels : [{% for item in labels %}
+         labels : [{% for item in labels3 %}
                         "{{item}}",
                     {% endfor %}],
          datasets : [
@@ -152,7 +155,7 @@
                   fillColor: "rgba(151,187,205,0.2)",
                   strokeColor: "rgba(151,187,205,1)",
                   pointColor: "rgba(151,187,205,1)",
-               data : [{% for item in values %}
+               data : [{% for item in values3 %}
                             {{item}},
                           {% endfor %}]
             }
@@ -182,7 +185,7 @@
     <script>
               // bar chart data
          var barData = {
-         labels : [{% for item in labels %}
+         labels : [{% for item in labels4 %}
                         "{{item}}",
                     {% endfor %}],
          datasets : [
@@ -190,7 +193,7 @@
                   fillColor: "rgba(151,187,205,0.2)",
                   strokeColor: "rgba(151,187,205,1)",
                   pointColor: "rgba(151,187,205,1)",
-               data : [{% for item in values %}
+               data : [{% for item in values4 %}
                             {{item}},
                           {% endfor %}]
             }
